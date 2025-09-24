@@ -1,4 +1,4 @@
-name: Ant Build (Self Hosted)
+name: Ant Build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: windows-latest
 
     steps:
 
