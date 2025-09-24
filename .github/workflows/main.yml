@@ -1,12 +1,17 @@
-name: Run Ant Build
+name: Ant Build (Self Hosted)
+
 on:
   push:
     branches: [ main ]
+  pull_request:
+
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: self-hosted   # 👈 this runs on your own machine
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Run Ant build
         run: ant
