@@ -1,8 +1,10 @@
 name: Run Ant Build
-
+on:
+  push:
+    branches: [ main ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
 
